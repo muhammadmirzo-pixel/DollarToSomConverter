@@ -1,0 +1,6 @@
+@DollarToSomConverter_HostAddress = http://localhost:5214
+
+GET {{DollarToSomConverter_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
