@@ -12,8 +12,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Service folder\IAuthServices\" />
-    <Folder Include="Service folder\AuthService\" />
+    <Folder Include="Controllers\" />
+    <Folder Include="Service\" />
   </ItemGroup>
 
 </Project>
