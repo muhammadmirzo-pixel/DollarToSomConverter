@@ -1,10 +1,9 @@
-﻿using DollarToSomConverter.AppsDbContext;
-using DollarToSomConverter.Domain_folder;
-using DollarToSomConverter.Repository_folder.IRepositories;
+﻿using DollarToSomConverter.Data.DbContexts;
+using DollarToSomConverter.Data.IRepositories;
+using DollarToSomConverter.Domain.Commons;
 using Microsoft.EntityFrameworkCore;
-using System.Linq.Expressions;
 
-namespace DollarToSomConverter.Repository_folder.Repositories;
+namespace DollarToSomConverter.Data.Repositories;
 
 public class Repository<TEntity> : IRepository<TEntity> where TEntity : Auditable
 {
@@ -34,19 +33,7 @@ public class Repository<TEntity> : IRepository<TEntity> where TEntity : Auditabl
         return entity;
     }
 
-    public async Task<TEntity> UpdateAsync(TEntity entity)
-    {
-        dbSet.Update(entity);
-        await context.SaveChangesAsync();
-        return entity;
-    }
-
-    public async Task<bool> DeleteAsync(TEntity entity)
-    {
-        dbSet.Remove(entity);
-        return await context.SaveChangesAsync() > 0;
-    }
-
+ 
     public Task<TEntity> UpdateAsync(TEntity entity, long id)
     {
         throw new NotImplementedException();

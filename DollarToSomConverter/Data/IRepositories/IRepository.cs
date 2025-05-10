@@ -1,8 +1,6 @@
-﻿using DollarToSomConverter.Domain_folder;
-using System.Diagnostics.Eventing.Reader;
-using System.Linq.Expressions;
+﻿using DollarToSomConverter.Domain.Commons;
 
-namespace DollarToSomConverter.Repository_folder.IRepositories;
+namespace DollarToSomConverter.Data.IRepositories;
 
 public interface IRepository<TEntity> where TEntity : Auditable
 {
