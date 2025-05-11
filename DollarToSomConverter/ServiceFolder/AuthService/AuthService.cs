@@ -1,9 +1,9 @@
 ﻿using DollarToSomConverter.Data.DbContexts;
 using DollarToSomConverter.Data.IRepositories;
 using DollarToSomConverter.Domain.Entities;
-using DollarToSomConverter.Service_folder.IAuthServices;
+using DollarToSomConverter.ServiceFolder.IAuthServices;
 
-namespace DollarToSomConverter.Service_folder.AuthService;
+namespace DollarToSomConverter.ServiceFolder.AuthService;
 
 public class AuthService : IAuthService
 {

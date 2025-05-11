@@ -1,6 +1,6 @@
 ﻿using DollarToSomConverter.Domain.Entities;
 
-namespace DollarToSomConverter.Service_folder.IAuthServices;
+namespace DollarToSomConverter.ServiceFolder.IAuthServices;
 
 public interface IAuthService
 {

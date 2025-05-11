@@ -12,8 +12,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace DollarToSomConverter.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250511065539_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20250511073428_SecondMigration")]
+    partial class SecondMigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

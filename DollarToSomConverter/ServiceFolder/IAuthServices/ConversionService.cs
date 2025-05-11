@@ -1,9 +1,9 @@
 ﻿using DollarToSomConverter.Data.DbContexts;
 using DollarToSomConverter.Data.IRepositories;
 using DollarToSomConverter.Domain.Entities;
-using DollarToSomConverter.Service_folder.AuthService;
+using DollarToSomConverter.ServiceFolder.AuthService;
 
-namespace DollarToSomConverter.Service_folder.IAuthServices;
+namespace DollarToSomConverter.ServiceFolder.IAuthServices;
 public class ConversionService : IConversionService
 {
     private const decimal somConvert = 12850;
