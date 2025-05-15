@@ -1,19 +1,17 @@
 ﻿using DollarToSomConverter.Data.DbContexts;
 using DollarToSomConverter.Data.IRepositories;
 using DollarToSomConverter.Domain.Entities;
-using DollarToSomConverter.ServiceFolder.AuthService;
+using DollarToSomConverter.IServices;
 
-namespace DollarToSomConverter.ServiceFolder.IAuthServices;
+namespace DollarToSomConverter.Service;
 public class ConversionService : IConversionService
 {
-    private const decimal somConvert = 12850;
+    private dynamic somConvert = 12850m;
     private readonly IRepository<Conversion> conversionRepository;
-    private readonly AppDbContext dbContext;
 
-    public ConversionService(IRepository<Conversion> repository, AppDbContext dbContext)
+    public ConversionService(IRepository<Conversion> repository)
     {
-        this.conversionRepository = repository;
-        this.dbContext = dbContext;
+        conversionRepository = repository;
     }
 
     public async Task<Conversion> ConvertAsync(decimal dollarAmount, long userId)
@@ -29,7 +27,7 @@ public class ConversionService : IConversionService
         };
 
         var result = await conversionRepository.CreateAsync(conversion);
-        await dbContext.SaveChangesAsync();
+        await conversionRepository.SaveChangeAsync();
 
         return result;
     }

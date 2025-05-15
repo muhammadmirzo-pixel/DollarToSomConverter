@@ -1,5 +1,5 @@
 ﻿using DollarToSomConverter.Domain.Entities;
-namespace DollarToSomConverter.ServiceFolder.AuthService;
+namespace DollarToSomConverter.IServices;
 
 public interface IConversionService
 {

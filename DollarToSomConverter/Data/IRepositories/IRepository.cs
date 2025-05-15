@@ -9,4 +9,5 @@ public interface IRepository<TEntity> where TEntity : Auditable
     Task<TEntity> CreateAsync(TEntity entity);
     Task<TEntity> UpdateAsync(TEntity entity, long id);
     Task<bool> DeleteAsync(long id);
+    Task<bool> SaveChangeAsync();
 }

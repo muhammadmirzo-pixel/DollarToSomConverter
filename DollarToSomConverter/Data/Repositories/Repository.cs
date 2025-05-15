@@ -43,5 +43,8 @@ public class Repository<TEntity> : IRepository<TEntity> where TEntity : Auditabl
     {
         throw new NotImplementedException();
     }
+
+    public async Task<bool> SaveChangeAsync()
+        => await this.context.SaveChangesAsync() > 0;
 }
 
