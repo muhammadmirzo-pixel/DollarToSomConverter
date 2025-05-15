@@ -1,8 +1,6 @@
-﻿using DollarToSomConverter.Domain.Commons;
+﻿namespace DollarToSomConverter.IServices.DTOs;
 
-namespace DollarToSomConverter.Domain.Entities;
-
-public class User : Auditable
+public class UserForUpdateDto
 {
     public string FirstName { get; set; }
     public string LastName { get; set; }

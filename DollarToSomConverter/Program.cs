@@ -1,3 +1,7 @@
+using DollarToSomConverter.Data.DbContexts;
+
+using Microsoft.EntityFrameworkCore; // Add this using directive for 'UseNpgsql'
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -6,6 +10,9 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"))); // Ensure 'UseNpgsql' is resolved
 
 var app = builder.Build();
 
